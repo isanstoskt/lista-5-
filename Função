@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+void rotacao(int *num1, int *num2, int *num3) {
+    int temp = *num1;
+    *num1 = *num2;
+    *num2 = *num3;
+    *num3 = temp;
+}
+
+int main() {
+    int num1, num2, num3;
+
+    printf("Digite três números para a rotação: ");
+    scanf("%d %d %d", &num1, &num2, &num3);
+
+  
+    printf("Números antes da rotação: %d, %d, %d\n", num1, num2, num3);
+
+    rotacao(&num1, &num2, &num3);
+
+  
+    printf("Números depois da rotação: %d, %d, %d\n", num1, num2, num3);
+
+    return 0;
+}
